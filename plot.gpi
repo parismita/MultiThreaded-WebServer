@@ -1,0 +1,14 @@
+set term pngcairo 
+set output 'tp.png'
+set xlabel "Load (No of Users)"
+set ylabel "Throughput (req/sec)"
+set label "(61, 38107)" at 61, 38107 point
+plot "load.txt" using 1:2 with lines title "Throughput\n(thinktime:0.001sec, cpus:1)"
+
+set term pngcairo 
+set output 'rt.png'
+set xlabel "Load (No of Users)"
+set ylabel "Response Time (sec)"
+set label "(61, 0.000538)" at 61, 0.000538 point
+plot "load.txt" using 1:3 with lines title "Response Time\n(thinktime:0.001sec, cpus:1)"
+
